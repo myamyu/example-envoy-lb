@@ -1,0 +1,16 @@
+version: "3"
+networks:
+  envoymesh:
+    external: true
+services:
+  envoy:
+    container_name: envoy
+    image: envoyproxy/envoy:v1.15-latest
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    networks:
+      - envoymesh
+    volumes:
+      - "./envoy.yaml:/etc/envoy/envoy.yaml"
