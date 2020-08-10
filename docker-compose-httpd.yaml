@@ -1,0 +1,27 @@
+version: "3"
+networks:
+  envoymesh:
+    external: true
+services:
+  web1:
+    container_name: web1
+    image: httpd:alpine
+    volumes:
+      - "./www1:/usr/local/apache2/htdocs"
+    networks:
+      envoymesh:
+        aliases:
+          - web1
+    expose:
+      - "80"
+  web2:
+    container_name: web2
+    image: httpd:alpine
+    volumes:
+      - "./www2:/usr/local/apache2/htdocs"
+    networks:
+      envoymesh:
+        aliases:
+          - web2
+    expose:
+      - "80"

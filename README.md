@@ -13,10 +13,26 @@ envoy ---+--- web1 (apache)
 networkを作っておく
 
 ```sh
-docker network create envoymesh
+make network_up
 ```
 
 気が済んだら↑も削除することを忘れずに
+
+```sh
+make network_down
+```
+
+## up
+
+```sh
+make up
+```
+
+## down
+
+```sh
+make down
+```
 
 ## 参考
 
