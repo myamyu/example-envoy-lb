@@ -18,6 +18,12 @@ docker network create envoymesh
 
 気が済んだら↑も削除することを忘れずに
 
+## up
+
+```sh
+docker-compose -f docker-compose-envoy.yaml -f docker-compose-httpd.yaml up -d
+```
+
 ## 参考
 
 - [envoyproxy/envoy/example/front-proxy](https://github.com/envoyproxy/envoy/tree/master/examples/front-proxy)
